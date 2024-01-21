@@ -4,9 +4,11 @@ Desafio 1 - Encontrar na máquina virtual um script que retorna data no formato 
 
 alterar o script para gerar um arquivo cujo prefixo é configurado numa variável e o nome do arquivo é obtido de um argumento do script
 
-exemplo:
+Exemplo:
 
+````
 $ script_data.sh coleta_indicadores
+````
 
 Gerado arquivo 2021.01.01_coleta_indicadores.txt
 
@@ -37,25 +39,39 @@ R:
 
 Pode se usar comando "find" para encontrar se caso tiver alguma dificuldade de encontrar
 
-Comando: find / -type f -name "coletor.sh"
+Comand find:
 
-Directory: cd /usr/local/bin/
+````
+find / -type f -name "coletor.sh"
+````
+
+Directory: 
+
+````
+cd /usr/local/bin/
+````
 
 Link:https://drive.google.com/file/d/141GA9FvHORSnyF2cVTbD_z6nv8kjVmfo/view?usp=sharing
 
 Desafio 6 - Quais problemas você encontrou?
+R:
 
 Desafio 7 - Como você resolveu estes problemas?
+R:
 
 Desafio 8 - Na sua opinião, haveria outras formas de resolvê-los?
+R:
 
 Desafio 9 - O passo anterior gerou um relatório. Na sua opinião quais problemas este banco de dados enfrentará quando for colocado em produção?
+R:
 
 # No dia a dia de trabalho, alguns problemas podem necessitar de algum apoio de um segundo nível. Este desafio pode conter problemas com esta característica.
 
+Desafio 10 - Caso você não tenha conseguido resolver algum problema, como você escalaria isso para um segundo nível? Quais abordagens você utilizaria para repassar o contexto para o segundo nível?
+R:
 
-
-
+Desafio 11 - Por fim, mas não menos importante, tenha você resolvido todos os desafios ou não, deixe suas considerações sobre o desafio e suas principais dificuldades
+R:
 
 
 
