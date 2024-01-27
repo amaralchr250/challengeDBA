@@ -153,7 +153,7 @@ R: Acerdito que iria dar problema na hora de rodas as consultas e devido ao pouc
 
 Desafio 10 - Caso você não tenha conseguido resolver algum problema, como você escalaria isso para um segundo nível? Quais abordagens você utilizaria para repassar o contexto para o segundo nível?
 
-R: Eu usaria todos os recuros que utilizei para realizar a execução da tarefa.
+R: Eu usaria todos os recursos e evidências que utilizei para realizar a execução da tarefa e mostraria até que ponto cheguei e qual seria a continuação dessa tratativa.
 
 Desafio 11 - Por fim, mas não menos importante, tenha você resolvido todos os desafios ou não, deixe suas considerações sobre o desafio e suas principais dificuldades
 
