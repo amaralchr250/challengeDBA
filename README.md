@@ -13,6 +13,31 @@ $ Gerado arquivo 2021.01.01_coleta_indicadores.txt
 
 R:
 
+Comando:
+
+````
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+    echo "Uso: $0 <file>"
+    exit 1
+fi
+
+fix="2021.01.01"
+
+file="$1"
+
+name="$fix"_"$file".txt
+
+echo "Generate file $name"
+
+touch "$name"
+````
+
+![image](https://github.com/amaralchr250/challengeDBA/assets/42553791/f14a273c-3b7b-4ee7-8dd1-bb4d3139975d)
+
+
+
 Desafio 2 - Criar um script que retorna o máximo de dados possível do sistema operacional ou documentar um guia com os comandos necessários
 
 1. Quantidade de processadores
@@ -61,10 +86,21 @@ A declaração com -u minusculo não existe na documentação do postgres e sim 
 Desafio 4 - Recebo este erro ao tentar conectar no servidor: psql: error: could not connect to server: No such file or directory Is the server running locally and accepting connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
 
 R:
+Conforme a imagem abaixo, realizando alguns troubleshooting, o primeiro passo é logar com usúario "postgres" e fazer a conexão se caso não funcionar o mais correto é verificar se o postgresql está ativado, se ele tiver verficiar se existe o socket Unix dentro do diretório.
+
+Comando:
+````
+su - postgres
+systemctl status postgresql
+ls -la /var/run/postgresql/
+sudo systemctl restart postgresql
+````
+
+![image](https://github.com/amaralchr250/challengeDBA/assets/42553791/f2298eb5-0ed4-437e-90cc-599e7e44c339)
 
 Desafio 5 - Oi, meu banco tá lento desde domingo após uma migração de dados e um sistema para o nosso banco de dados. O que pode ser?
 
-R:
+R: Nesses casos teria que ser verificado as query que estão rodando para validar o aumento de consultas no banco, verificar atráves da instãncia ou até mesmo em LOGs e situações que vão ser mais fácil de identificar que as consultas podem estar demorando devido ao tempo de indices ou até mesmo grande quantidade de conexões que estão sendo executadas em backgroud.
 
 # Na máquina virtual existe um script coletor.sh que vai retornar algumas informações sobre um banco de dados, ao executá-lo você encontrará o próximo problema.
 
@@ -86,26 +122,41 @@ Link: https://drive.google.com/file/d/141GA9FvHORSnyF2cVTbD_z6nv8kjVmfo/view?usp
 
 Desafio 6 - Quais problemas você encontrou?
 
-R:
+R: Encontrei problema com socket que foi resolvido com os comandos do desafio acima, depois coloquei o postgres no grupo de su, recebi erro devido alto uso de memoria cache na past /.temp e na raíz também na qual usei os comandos abaixo:
+
+![image](https://github.com/amaralchr250/challengeDBA/assets/42553791/cd13e04d-f2d1-4ba3-801d-913180e1c014)
+
+![image](https://github.com/amaralchr250/challengeDBA/assets/42553791/0bded294-ba89-4134-9fef-cec247cc57c5)
 
 Desafio 7 - Como você resolveu estes problemas?
 
 R:
 
+````
+su - postgres
+cd /temp
+rm -rf "nome do arquivo"
+cd /
+su
+ls
+rm "arquivos da raíz"
+cd /usr/local/bin
+bash coletor.sh
+````
 Desafio 8 - Na sua opinião, haveria outras formas de resolvê-los?
 
-R:
+R: No meu conhecimento eu acredito que deveria ter formas mais simples e rápidas, mas com meu entendimento consegui executar a tarefa sem problemas.
 
 Desafio 9 - O passo anterior gerou um relatório. Na sua opinião quais problemas este banco de dados enfrentará quando for colocado em produção?
 
-R:
+R: Acerdito que iria dar problema na hora de rodas as consultas e devido ao pouco espaço de disco isso aconteceria problema.
 
 # No dia a dia de trabalho, alguns problemas podem necessitar de algum apoio de um segundo nível. Este desafio pode conter problemas com esta característica.
 
 Desafio 10 - Caso você não tenha conseguido resolver algum problema, como você escalaria isso para um segundo nível? Quais abordagens você utilizaria para repassar o contexto para o segundo nível?
 
-R:
+R: Eu usaria todos os recuros que utilizei para realizar a execução da tarefa.
 
 Desafio 11 - Por fim, mas não menos importante, tenha você resolvido todos os desafios ou não, deixe suas considerações sobre o desafio e suas principais dificuldades
 
-R:
+R: O desafio foi muito bom, mas fiquei frustrado por não ter mais tempo para realizar o desafio devido a falta de prática e XP em questão de banco de dados.
