@@ -96,8 +96,6 @@ ls -la /var/run/postgresql/
 sudo systemctl restart postgresql
 ````
 
-![image](https://github.com/amaralchr250/challengeDBA/assets/42553791/f2298eb5-0ed4-437e-90cc-599e7e44c339)
-
 Desafio 5 - Oi, meu banco tá lento desde domingo após uma migração de dados e um sistema para o nosso banco de dados. O que pode ser?
 
 R: Nesses casos teria que ser verificado as query que estão rodando para validar o aumento de consultas no banco, verificar atráves da instãncia ou até mesmo em LOGs e situações que vão ser mais fácil de identificar que as consultas podem estar demorando devido ao tempo de indices ou até mesmo grande quantidade de conexões que estão sendo executadas em backgroud.
@@ -130,7 +128,7 @@ R: Encontrei problema com socket que foi resolvido com os comandos do desafio ac
 
 Desafio 7 - Como você resolveu estes problemas?
 
-R:
+R: Usei esses comandos mas o erro permaneceu do "cannot create temp file for here-document" então essa parte não consegui resolver.
 
 ````
 su - postgres
@@ -145,11 +143,11 @@ bash coletor.sh
 ````
 Desafio 8 - Na sua opinião, haveria outras formas de resolvê-los?
 
-R: No meu conhecimento eu acredito que deveria ter formas mais simples e rápidas, mas com meu entendimento consegui executar a tarefa sem problemas.
+R: No meu conhecimento eu acredito que deveria ter formas mais simples e rápidas, mas com meu entendimento consegui executar as tarefas mas no ultimo momento acima cannot "create temp file for here-document"  tentei diveras tentativas mas sem sucesso.
 
 Desafio 9 - O passo anterior gerou um relatório. Na sua opinião quais problemas este banco de dados enfrentará quando for colocado em produção?
 
-R: Acerdito que iria dar problema na hora de rodas as consultas e devido ao pouco espaço de disco isso aconteceria problema.
+R: Acerdito que iria dar problema na hora de rodas as consultas e devido ao pouco espaço de disco isso aconteceria problema recorrente em todas as consultas trazendo problemas nas interação de dados.
 
 # No dia a dia de trabalho, alguns problemas podem necessitar de algum apoio de um segundo nível. Este desafio pode conter problemas com esta característica.
 
@@ -159,4 +157,4 @@ R: Eu usaria todos os recuros que utilizei para realizar a execução da tarefa.
 
 Desafio 11 - Por fim, mas não menos importante, tenha você resolvido todos os desafios ou não, deixe suas considerações sobre o desafio e suas principais dificuldades
 
-R: O desafio foi muito bom, mas fiquei frustrado por não ter mais tempo para realizar o desafio devido a falta de prática e XP em questão de banco de dados.
+R: O desafio foi muito bom, mas fiquei frustrado por não conseguir e como hoje é o ultimo dia que vou conseguir fazer o desafio, é tudo que consegui fazer até o momento.
