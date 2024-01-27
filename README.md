@@ -98,7 +98,7 @@ sudo systemctl restart postgresql
 
 Desafio 5 - Oi, meu banco tá lento desde domingo após uma migração de dados e um sistema para o nosso banco de dados. O que pode ser?
 
-R: Nesses casos teria que ser verificado as query que estão rodando para validar o aumento de consultas no banco, verificar atráves da instãncia ou até mesmo em LOGs e situações que vão ser mais fácil de identificar que as consultas podem estar demorando devido ao tempo de indices ou até mesmo grande quantidade de conexões que estão sendo executadas em backgroud.
+R: Nesses casos teria que ser verificado as query que estão rodando para validar o aumento de consultas no banco, verificar atráves da instãncia ou até mesmo em LOGs e situações que vão ser mais fácil de identificar que as consultas podem estar demorando devido ao tempo de indices ou até mesmo grande quantidade de conexões que estão sendo executadas em background.
 
 # Na máquina virtual existe um script coletor.sh que vai retornar algumas informações sobre um banco de dados, ao executá-lo você encontrará o próximo problema.
 
