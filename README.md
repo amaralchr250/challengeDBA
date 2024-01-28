@@ -61,7 +61,7 @@ df -h | sort -rh | head -n 5
 
 
 echo -e "\nNetwork transfer"
-interface=$(ifconfig | awk '/^[a-zA-Z]/{interface=$1; next} /bytes/{print interface, $2, $6}')
+interface=$(ifconfig) | awk '/^[a-zA-Z]/{interface=$1; next} /bytes/{print interface, $2, $6}')
 echo "$interface"
 
 echo -e "\n New SSH KEY"
