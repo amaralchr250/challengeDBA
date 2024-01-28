@@ -70,7 +70,7 @@ echo -e "\n New SSH KEY"
 ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ""
 ````
 
-![image](https://github.com/amaralchr250/challengeDBA/assets/42553791/ca573ede-bb72-4ec7-92e5-30808507a666)
+![image](https://github.com/amaralchr250/challengeDBA/assets/42553791/b4800fe5-3aed-4de6-b951-d3997d776b10)
 
 
 Os itens abaixo representam alguns emails que você recebeu de algumas de nossas empresas clientes solicitando ajuda, e você precisa respondê-los com algum encaminhamento. Segue conteúdo dos emails recebidos:
